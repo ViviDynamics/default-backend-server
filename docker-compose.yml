@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  server:
+    image: vividynamics/default-backend-server
+    build: .
+    restart: "always"
+    ports:
+      - "4567:4567"
+    environment:
+      RACK_ENV: $RACK_ENV
