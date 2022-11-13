@@ -3,3 +3,5 @@
 .git
 .ruby-gemset
 .ruby-version
+.env
+.env.sample

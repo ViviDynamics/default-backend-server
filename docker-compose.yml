@@ -5,6 +5,8 @@ services:
     build: .
     restart: "always"
     ports:
-      - "4567:4567"
+      - ${PORT}:${PORT}
     environment:
       RACK_ENV: $RACK_ENV
+      BIND_ADDRESS: $BIND_ADDRESS
+      PORT: $PORT

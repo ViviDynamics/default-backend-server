@@ -14,6 +14,6 @@ RUN chmod +x /opt/default-backend-server/bin/entrypoint
 COPY bin/entrypoint /usr/bin/
 RUN chmod +x /usr/bin/entrypoint
 ENTRYPOINT ["entrypoint"]
-EXPOSE 4567
+EXPOSE $PORT
 
-CMD ["/bin/bash", "--login", "-c", "bundle exec rackup app.ru -o '0.0.0.0' -p 4567"]
+CMD exec bundle exec rackup app.ru -o $BIND_ADDRESS -p $PORT
