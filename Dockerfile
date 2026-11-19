@@ -1,4 +1,4 @@
-FROM ruby:3.1.2
+FROM ruby:3.4.13
 
 RUN apt-get update -qq && apt-get upgrade -y
 WORKDIR /opt/default-backend-server
