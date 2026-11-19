@@ -1,5 +1,5 @@
 # app.ru
-require 'sinatra'
+require 'sinatra/base'
 
 class DefaultBackendServer < Sinatra::Base
   set :public_folder, __dir__ + '/static'
